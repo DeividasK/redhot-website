@@ -12,6 +12,10 @@ h2 {
 	margin: 50px 0 100px 0;
 }
 
+p {
+	font-size: 20px;
+}
+
 /*
 *		NAVIGATION
 */
@@ -136,7 +140,6 @@ h2 {
 }
 
 .jumbotron p {
-	font-family: 'Open sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
 	color: white;
 	font-size: 4em;
 	text-transform: lowercase;
@@ -197,12 +200,21 @@ section.container h2 {
 
 #dealer-map {
 	height: 100vh;
+	padding-top: 15vh;
 }
 
 #map_canvas {
-	height: 500px;
-	width: 100wh;
-	margin: 20px;
+	height: 90vh;
+	top: -28.5vh;
+}
+
+#dealer-map .container {
+	position: relative;
+	z-index: 1;
+}
+
+#dealer-map .container h2 {
+	margin-bottom: 0px;
 }
 
 /*
@@ -271,3 +283,40 @@ color: white !important;
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+	#home video {
+		width: initial;
+	}
+
+	#home h1 {
+		font-size: 4em;
+	}
+
+	#home p {
+		font-size: 2em;
+	}
+
+	#home p.bottom-right-corner {
+		font-size: 1em;
+	}
+
+	.jumbotron .bottom-right-corner {
+	bottom: -20px;
+	}
+
+	.jumbotron p img {
+		width: 100px;
+	}
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
