@@ -2,18 +2,33 @@ body {
 	padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, td, th {
 	color: black;
 	font-family: 'Open sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
 	text-align: center;
 }
 
 h2 {
-	margin: 50px 0 100px 0;
+	margin: 10px 0 20px 0;
+	font-size: 60px;
 }
 
-p {
-	font-size: 20px;
+h3 {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+p, td {
+	font-size: 16px;
+}
+
+td, th {
+	padding: 0 10px;
+	text-align: left;
+}
+
+td:first-child {
+	text-align: right;
 }
 
 /*
@@ -33,7 +48,7 @@ p {
 .navbar-inverse .navbar-nav>li>a,
 .navbar-inverse .navbar-nav>li>a:hover {
 	font-family: 'Open sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-weight: bold;
+	font-weight: 800;
 	color: black;
 	border: none;
 	text-transform: uppercase;
@@ -175,16 +190,18 @@ p {
 
 #why, #how, #what {
 	min-height: 100vh;
-	padding: 6vh 0;
+	padding: 2vh 0;
 }
 
-section.container h2 {
-	font-family: 'Open sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 4em;
+#why img {
+	margin: 0 auto;
+	display: block;
+	max-height: 120px;
+	padding: 0 20px 10px 20px;
 }
 
 #why .row {
-	min-height: 22vh;
+	padding: 20px;
 }
 
 .icon {
@@ -194,22 +211,106 @@ section.container h2 {
 }
 
 /*
-*		GOOGLE MAP
+*		HOW section
+*/
+
+#paint {
+	overflow: hidden;
+	height: 100vh;
+	z-index: -1;
+	max-width: 100%;
+}
+
+#paint video {
+	width: 100%;
+}
+
+#how {
+	position: absolute;
+	left: 50%;
+	margin-left: -585px;
+}
+
+#how h3, #how p {
+	color: white;
+	text-shadow: 1px 1px 1px black;
+}
+
+/*
+*		WHAT section
+*/
+
+#what {
+	width: initial;
+	background: url('../images/Square-grid.png');
+	border-bottom: 1px solid black;
+}
+
+#what .row {
+	padding: 10px 0;
+}
+
+#what .row:first-child .col-md-4 {
+	margin-left: 0.5%;
+}
+
+#what .img-container {
+	display: flex;
+	justify-content: center;
+}
+
+#what img {
+	max-height: 200px;
+}
+
+#what h3 {
+	text-decoration: underline;
+	font-family: 'Architects daughter';
+}
+
+#what .col-md-4 {
+	background: rgba(255,255,255,1);
+	border: 1px solid black;
+	margin-left: 1%;
+	width: 32%;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 1px 1px 3px black;
+}
+
+#what .col-md-4:last-child {
+	margin-right: 1%;
+}
+
+#what .col-md-4 table {
+	margin: 0 auto;
+}
+
+#what .col-md-4 p:last-child,
+#what .col-md-4 table:last-child,
+#what .col-md-4 div:last-child {
+	margin-bottom: 20px;
+}
+
+/*
+*		DEALERS section
 */
 
 #dealer-map {
-	height: 100vh;
-	padding-top: 15vh;
+	min-height: 100vh;
 }
 
 #map_canvas {
-	height: 90vh;
-	top: -28.5vh;
+	min-height: 400px; 
+	height: 100vh;
 }
 
 #dealer-map .container {
-	position: relative;
+	position: absolute;
 	z-index: 1;
+	width: 700px;
+	left: 50%;
+	margin: 70px 0 0 -350px;
 }
 
 #dealer-map .container h2 {
@@ -219,10 +320,6 @@ section.container h2 {
 /*
 *		FOOTER
 */
-
-footer {
-
-}
 
 #back-to-top a {
 	color: black;
@@ -243,11 +340,14 @@ footer {
 color: white !important;
 }
 
-.red-black {
-	font-weight: bold;
+.red, .red-black {
 	color: #e1261c;
-	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.red-black {
 	text-shadow: 1px 1px 1px black;
+	text-transform: uppercase;
 }
 
 .hide {

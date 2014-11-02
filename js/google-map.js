@@ -2,12 +2,16 @@ function initialize() {
 
 	var myLatlng = new google.maps.LatLng(45.507865, 9.116277);
 	var dealer = new google.maps.LatLng(45.438969, 10.990815);
+	var startingPosition = new google.maps.LatLng(44.656058, 10.171665);
 
 	var mapCanvas = document.getElementById('map_canvas');
 
 	var mapOptions = {
-		center: myLatlng,
+		center: startingPosition,
 		zoom: 6,
+		panControl: true,
+		zoomControl: true,
+	    disableDefaultUI: true,
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		scrollwheel: false
 	}
