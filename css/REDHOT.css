@@ -78,7 +78,6 @@ p {
 }
 
 #home video {
-	width: 100%;
     -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 5s; /* Firefox < 16 */
         -ms-animation: fadein 5s; /* Internet Explorer */
@@ -257,6 +256,15 @@ color: white !important;
 	margin: 0;
 }
 
+.row {
+	margin: 0;
+}
+
+.fa-spin {
+	width: 50%;
+	margin: auto;
+}
+
 /*
 *		EFFECTS
 */
@@ -286,9 +294,6 @@ color: white !important;
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
-	#home video {
-		width: initial;
-	}
 
 	#home h1 {
 		font-size: 4em;
@@ -316,7 +321,6 @@ color: white !important;
 @media (min-width: @screen-sm-min) { ... }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { ... }
+@media (max-width: 1199px) {
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { ... }
+}
