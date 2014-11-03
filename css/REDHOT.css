@@ -256,7 +256,6 @@ td:first-child {
 
 #what {
 	width: initial;
-	background: url('../images/Square-grid.png');
 	border-bottom: 1px solid black;
 }
 
@@ -343,6 +342,7 @@ td:first-child {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
+	z-index: 50;
 }
 
 #back-to-top a:hover {
