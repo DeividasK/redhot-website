@@ -1,15 +1,21 @@
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
 .carousel {
   min-height: 500px;
   height: 100vh;
-  border-bottom: 1px solid black;
 }
+
+.carousel h2, .carousel p {
+  font-family: 'Architects daughter',"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.carousel p {
+  text-shadow: none;
+}
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
+  padding: 0;
+  position: initial;
 }
 
 /* Declare heights because of positioning of img element */
@@ -27,11 +33,9 @@ min-height: 500px;
 
 .carousel-control.right, .carousel-control.left {
   background-image: initial;
-}
-
-#myCarousel a i.fa{
-  margin-top: 50vh;
-  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-indicators li {
@@ -42,10 +46,20 @@ min-height: 500px;
   background-color: black;
 }
 
+.carousel-inner .item .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.carousel-control {
+  z-index: 10;
+}
+
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
   margin-bottom: 20px;
   text-align: center;
@@ -59,10 +73,14 @@ min-height: 500px;
 }
 
 #myCarousel img {
-  margin: 0 auto;
+  margin: 25px auto;
   display: block;
   max-height: 120px;
   padding: 0 20px 10px 20px;
+}
+
+#myCarousel a i.fa{
+  color: black;
 }
 
 /* Featurettes
@@ -84,13 +102,6 @@ min-height: 500px;
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
-  .carousel-caption { 
-    right: 20%;
-    left: 20%;
-    bottom: 50%;
-    padding-bottom: 30px;
-    margin-bottom: -182px;
-  }
 
   /* Navbar positioning foo */
   .navbar-wrapper {
@@ -111,10 +122,17 @@ min-height: 500px;
   }
 
   /* Bump up size of carousel content */
+  .carousel-caption {
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+
   .carousel-caption p {
     margin-bottom: 20px;
     font-size: 21px;
     line-height: 1.4;
+    text-shadow: initial;
   }
 
   .featurette-heading {

@@ -27,6 +27,10 @@ td, th {
 	text-align: left;
 }
 
+video {
+	width: 100%;
+}
+
 td:first-child {
 	text-align: right;
 }
@@ -52,6 +56,19 @@ td:first-child {
 	color: black;
 	border: none;
 	text-transform: uppercase;
+}
+
+.navbar-inverse .collapsed {
+	background-color: black;
+	border-color: black;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+	background-color: black;
+}
+
+.navbar-inverse .navbar-toggle:focus {
+	background-color: grey;
 }
 
 .navbar-nav>li {
@@ -205,7 +222,7 @@ td:first-child {
 }
 
 .icon {
-	font-size: 100px !important;
+	font-size: 100px;
 	text-align: center;
 	display: block;
 }
@@ -219,10 +236,6 @@ td:first-child {
 	height: 100vh;
 	z-index: -1;
 	max-width: 100%;
-}
-
-#paint video {
-	width: 100%;
 }
 
 #how {
@@ -309,13 +322,16 @@ td:first-child {
 #dealer-map .container {
 	position: absolute;
 	z-index: 1;
-	width: 700px;
-	left: 50%;
-	margin: 70px 0 0 -350px;
+	min-width: 300px;
+	width: 100%;
 }
 
 #dealer-map .container h2 {
 	margin-bottom: 0px;
+}
+
+#dealer-map .container .row {
+	margin-top: 20px;
 }
 
 /*
@@ -396,6 +412,34 @@ color: white !important;
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
 
+	button.navbar-toggle {
+		background-color: black;
+		margin-right: 25px;
+	}
+
+	.navbar-nav {
+		width: 33%;
+		margin-left: auto;
+		background: white;
+		margin-right: 10px;
+		border: 1px solid;
+		border-radius: 10px;
+	}
+
+	.navbar-nav>li:first-child {
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+
+	.navbar-nav>li:last-child {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+		border: none;
+	}
+
 	#home h1 {
 		font-size: 4em;
 	}
@@ -415,13 +459,47 @@ color: white !important;
 	.jumbotron p img {
 		width: 100px;
 	}
+
+	#what .col-md-4 {
+		margin: 1% 1%;
+		width: 98%;
+	}
+
+	#what .col-md-4:last-child {
+		margin-right: 1%;
+	}
+
+	#what .row:first-child .col-md-4 {
+		margin-left: 1%;
+	}
+
 }
 
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { ... }
+@media (max-width: 991px) {
+
+	video {
+		width: auto;
+	}
+
+	#dealer-map .container h2 {
+		font-size: 40px;
+	}
+
+	#dealer-map .container i {
+		font-size: 70px;
+	}
+
+}
 
 /* Medium devices (desktops, 992px and up) */
 @media (max-width: 1199px) {
-
+	#how {
+		position: absolute;
+		left: 0;
+		margin-left: 0;
+		z-index: 10;
+		width: 100%;
+	}
 }
