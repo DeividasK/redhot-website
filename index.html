@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/jumbotron.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
     <link href="css/REDHOT.css" rel="stylesheet">
 
     <!-- Open sans and Indie Flower fonts from Google Fonts -->
@@ -49,11 +50,13 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#home" class="btn btn-default white hide">What</a></li>
+            <li><a href="#home" class="btn btn-default white hide">Home</a></li>
+            <li><a href="#myCarousel" class="btn btn-default white">Carousel</a></li>
             <li><a href="#why" class="btn btn-default white">Why</a></li>
             <li><a href="#how" class="btn btn-default white">How</a></li>
             <li><a href="#what" class="btn btn-default white">What</a></li>
             <li><a href="#dealer-map" class="btn btn-default white">Dealers</a></li>
+            <li><a href="#contact-us" class="btn btn-default white">Contacts</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -69,6 +72,14 @@
         <p class="bottom-right-corner">by <img src="images/redal-logo-white-horizontal.png" alt="REDAL logo"/></p>
       </div>
     </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    </div><!-- /.carousel -->
+
 
     <section id="why" class="container">
 
@@ -284,6 +295,11 @@
     <script src="js/smooth-scroll.js"></script>
     <script src="js/google-map.js"></script>
     <script src="js/video-detection.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $("#myCarousel").load("carousel.html");
+    });
+    </script>
 
   </body>
 </html>

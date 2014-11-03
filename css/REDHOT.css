@@ -130,7 +130,7 @@ td:first-child {
 			animation-delay: 1.5s;
 }
 
-.navbar, .bottom-right-corner {
+.bottom-right-corner {
     -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 5s; /* Firefox < 16 */
         -ms-animation: fadein 5s; /* Internet Explorer */
@@ -229,6 +229,7 @@ td:first-child {
 	position: absolute;
 	left: 50%;
 	margin-left: -585px;
+	z-index: 5;
 }
 
 #how h3, #how p {
