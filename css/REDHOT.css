@@ -134,11 +134,11 @@ td:first-child {
 }
 
 .jumbotron .container h1:first-child, .jumbotron .container p:nth-child(2) {
-    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 5s; /* Firefox < 16 */
-        -ms-animation: fadein 5s; /* Internet Explorer */
-         -o-animation: fadein 5s; /* Opera < 12.1 */
-            animation: fadein 5s;
+    -webkit-animation: fadein 15s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 15s; /* Firefox < 16 */
+        -ms-animation: fadein 15s; /* Internet Explorer */
+         -o-animation: fadein 15s; /* Opera < 12.1 */
+            animation: fadein 15s;
 
 	-webkit-animation-delay: 1.5s;
 	   -moz-animation-delay: 1.5s;
@@ -256,7 +256,6 @@ td:first-child {
 
 #what {
 	width: initial;
-	border-bottom: 1px solid black;
 }
 
 #what .row {
@@ -311,6 +310,8 @@ td:first-child {
 
 #dealer-map {
 	min-height: 100vh;
+	border-bottom: 1px solid;
+	border-top: 1px solid;
 }
 
 #map_canvas {
@@ -336,6 +337,18 @@ td:first-child {
 /*
 *		FOOTER
 */
+
+footer {
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer p {
+	font-weight: bold;
+	margin: 0;
+}
 
 #back-to-top a {
 	color: black;
