@@ -510,7 +510,8 @@ color: white !important;
 @media (max-width: 991px) {
 
 	video {
-		width: auto;
+		width: initial;
+		height: 100vh;;
 	}
 
 	#dealer-map .container h2 {
