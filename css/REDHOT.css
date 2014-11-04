@@ -122,6 +122,7 @@ ul.nav.navbar-nav.navbar-right.nav-background {
 }
 
 #home video {
+
     -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 5s; /* Firefox < 16 */
         -ms-animation: fadein 5s; /* Internet Explorer */
@@ -509,11 +510,6 @@ color: white !important;
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 991px) {
 
-	video {
-		width: initial;
-		height: 100vh;;
-	}
-
 	#dealer-map .container h2 {
 		font-size: 40px;
 	}
@@ -526,6 +522,12 @@ color: white !important;
 
 /* Medium devices (desktops, 992px and up) */
 @media (max-width: 1199px) {
+	
+	video {
+		width: initial;
+		height: 100vh;;
+	}
+
 	#how {
 		position: absolute;
 		left: 0;
